@@ -23,6 +23,8 @@ command -v git >/dev/null 2>&1 || { echo "I require git but it's not installed. 
 #Get vimrc file
 cd ~
 git clone https://github.com/junderhill/VimConfig.git
+cp ~/VimConfig/.vimrc ~/.vimrc
+rm -r -f ~/VimConfig
 
 #get plugins
 
