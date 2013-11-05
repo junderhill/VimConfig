@@ -12,7 +12,8 @@ curl -Sso ~/.vim/autoload/pathogen.vim https://raw.github.com/tpope/vim-pathogen
 
 #Backup vimrc
 
-if [ -f ~/.vimrc ] then
+if [ -f ~/.vimrc ] 
+then
   cp ~/.vimrc ~/.vimrc_backup
   rm ~/.vimrc
 fi
