@@ -1,14 +1,14 @@
 #!/bin/bash
 
 mkdir ~/.vim
-mkdir ~/.vim/bundle
-mkdir ~/.vim/autoload
 
 #Check if curl is installed
 command -v curl >/dev/null 2>&1 || { echo "I require curl but it's not installed. Aborting." >&2; exit 1; }
 
 #Install pathogen
-curl -Sso ~/.vim/autoload/pathogen.vim https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
+mkdir -p ~/.vim/autoload ~/.vim/bundle; \
+  curl -LSso ~/.vim/autoload/pathogen.vim \
+      https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
 
 #Backup vimrc
 
@@ -40,4 +40,4 @@ git clone https://github.com/Lokaltog/vim-easymotion.git
 git clone https://github.com/tpope/vim-fugitive.git
 git clone https://github.com/nathanaelkane/vim-indent-guides.git
 git clone https://github.com/plasticboy/vim-markdown.git
-git clone https://github.com/tsaleh/vim-matchit.git
+
