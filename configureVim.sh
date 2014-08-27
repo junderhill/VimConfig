@@ -21,7 +21,7 @@ fi
 #Check git is installed
 command -v git >/dev/null 2>&1 || { echo "I require git but it's not installed. Aborting." >&2; exit 1; }
 
-cp vimc ~/.vimrc
+cp vimrc ~/.vimrc
 
 #get plugins
 
