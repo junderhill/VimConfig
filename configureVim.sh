@@ -36,4 +36,5 @@ git clone https://github.com/Lokaltog/vim-easymotion.git
 git clone https://github.com/tpope/vim-fugitive.git
 git clone https://github.com/nathanaelkane/vim-indent-guides.git
 git clone https://github.com/plasticboy/vim-markdown.git
-
+git clone https://github.com/tpope/vim-endwise.git
+git clone https://github.com/tpope/vim-surround.git
