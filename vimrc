@@ -6,7 +6,7 @@
   syntax on
  
   "set background=dark
-  "colorscheme solarized
+  colorscheme solarized
  
   set hidden
   set autoindent
@@ -22,6 +22,7 @@
   set shiftwidth=2
   set softtabstop=2
   set expandtab
+  set spelllang=en_gb
  
  
  au VimEnter * RainbowParenthesesToggleAll
@@ -31,4 +32,5 @@
  let g:vim_markdown_folding_disabled=1
  autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
  autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
+ autocmd BufRead,BufNewFile *.md setlocal spell
 
