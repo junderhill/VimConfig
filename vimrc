@@ -6,8 +6,7 @@
   syntax on
  
   "set background=dark
-  colorscheme solarized
- 
+  "colorscheme jellybeans
   set hidden
   set autoindent
   set ruler
