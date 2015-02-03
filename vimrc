@@ -33,3 +33,8 @@
  autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
  autocmd BufRead,BufNewFile *.md setlocal spell
 
+ if has("win32")
+      set directory=c:\\tmp,c:\\temp
+    elseif has("unix")
+         set directory=/tmp
+ endif
