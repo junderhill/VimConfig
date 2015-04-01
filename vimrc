@@ -1,8 +1,7 @@
 execute pathogen#infect() 
+set nocompatible
 
-set nocompatible               " be iMproved
-
-filetype indent plugin on                   " required!
+filetype indent plugin on 
 syntax on
 
 set hidden
@@ -39,6 +38,7 @@ elseif has("unix")
   set directory=/tmp
 endif
 
+"Disable cursor keys to force use of h,j,k,l
 noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Right> <NOP>
@@ -48,4 +48,5 @@ inoremap <Down> <NOP>
 inoremap <Right> <NOP>
 inoremap <Left> <NOP>
 
+"Map jk in insert mode to <esc>
 inoremap jk <ESC> 

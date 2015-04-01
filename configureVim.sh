@@ -8,7 +8,7 @@ command -v curl >/dev/null 2>&1 || { echo "I require curl but it's not installed
 #Install pathogen
 mkdir -p ~/.vim/autoload ~/.vim/bundle; \
   curl -LSso ~/.vim/autoload/pathogen.vim \
-      https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
+  https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
 
 #Backup vimrc
 
@@ -24,7 +24,6 @@ command -v git >/dev/null 2>&1 || { echo "I require git but it's not installed. 
 cp vimrc ~/.vimrc
 
 #get plugins
-
 cd ~/.vim/bundle
 git clone https://github.com/kien/ctrlp.vim.git
 git clone https://github.com/scrooloose/nerdtree.git
