@@ -1,40 +1,51 @@
-  execute pathogen#infect() 
- 
-  set nocompatible               " be iMproved
- 
-  filetype indent plugin on                   " required!
-  syntax on
- 
-  "set background=dark
-  "colorscheme jellybeans
-  set hidden
-  set autoindent
-  set ruler
-  set nostartofline
-  set laststatus=2
- 
-  set confirm
-  set visualbell
-  set mouse=a
-  set number
- 
-  set shiftwidth=2
-  set softtabstop=2
-  set expandtab
-  set spelllang=en_gb
- 
- 
- au VimEnter * RainbowParenthesesToggleAll
- 
- "Indent guide
- let g:indent_guides_auto_colors = 0
- let g:vim_markdown_folding_disabled=1
- autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
- autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
- autocmd BufRead,BufNewFile *.md setlocal spell
+execute pathogen#infect() 
 
- if has("win32")
-      set directory=c:\\tmp,c:\\temp
-    elseif has("unix")
-         set directory=/tmp
- endif
+set nocompatible               " be iMproved
+
+filetype indent plugin on                   " required!
+syntax on
+
+set hidden
+set autoindent
+set ruler
+set nostartofline
+set laststatus=2
+
+set confirm
+set visualbell
+set mouse=a
+set number
+
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+set spelllang=en_gb
+
+
+au VimEnter * RainbowParenthesesToggleAll
+
+"Indent guide
+let g:indent_guides_auto_colors = 0
+let g:vim_markdown_folding_disabled=1
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
+autocmd BufRead,BufNewFile *.md setlocal spell
+
+
+
+if has("win32")
+  set directory=c:\\tmp,c:\\temp
+elseif has("unix")
+  set directory=/tmp
+endif
+
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Right> <NOP>
+noremap <Left> <NOP>
+inoremap <Up> <NOP>
+inoremap <Down> <NOP>
+inoremap <Right> <NOP>
+inoremap <Left> <NOP>
+
+inoremap jk <ESC> 
