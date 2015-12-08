@@ -26,11 +26,9 @@ cp vimrc ~/.vimrc
 #get plugins
 cd ~/.vim/bundle
 git clone https://github.com/kien/ctrlp.vim.git
-git clone https://github.com/scrooloose/nerdtree.git
 git clone https://github.com/kien/rainbow_parentheses.vim.git
 git clone https://github.com/scrooloose/syntastic.git
 git clone https://github.com/nathanaelkane/vim-indent-guides.git
 git clone https://github.com/plasticboy/vim-markdown.git
-git clone https://github.com/tpope/vim-endwise.git
 git clone https://github.com/tpope/vim-surround.git
 git clone https://github.com/ervandew/supertab.git

@@ -31,22 +31,11 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
 autocmd BufRead,BufNewFile *.md setlocal spell
 
 
-
 if has("win32")
   set directory=c:\\tmp,c:\\temp
 elseif has("unix")
   set directory=/tmp
 endif
-
-"Disable cursor keys to force use of h,j,k,l
-noremap <Up> <NOP>
-noremap <Down> <NOP>
-noremap <Right> <NOP>
-noremap <Left> <NOP>
-inoremap <Up> <NOP>
-inoremap <Down> <NOP>
-inoremap <Right> <NOP>
-inoremap <Left> <NOP>
 
 "Map jk in insert mode to <esc>
 inoremap jk <ESC> 
