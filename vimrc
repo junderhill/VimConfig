@@ -20,7 +20,6 @@ set softtabstop=2
 set expandtab
 set spelllang=en_gb
 
-
 au VimEnter * RainbowParenthesesToggleAll
 
 "Indent guide
@@ -31,13 +30,6 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
 autocmd BufRead,BufNewFile *.md setlocal spell
 
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
-
-"limelight
-let g:limelight_conceal_ctermfg = 240
-let g:limelight_conceal_guifg = 'DarkGray'
-
-autocmd! User GoyoEnter Limelight
-autocmd! User GoyoLeave Limelight!
 
 if has("win32")
   set directory=c:\\tmp,c:\\temp

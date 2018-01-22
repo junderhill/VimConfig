@@ -31,6 +31,4 @@ git clone https://github.com/scrooloose/syntastic.git
 git clone https://github.com/nathanaelkane/vim-indent-guides.git
 git clone https://github.com/plasticboy/vim-markdown.git
 git clone https://github.com/ervandew/supertab.git
-git clone https://github.com/junegunn/goyo.vim.git
-git clone https://github.com/junegunn/limelight.vim.git
 git clone https://github.com/tpope/vim-endwise.git
