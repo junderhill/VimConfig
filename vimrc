@@ -13,7 +13,7 @@ set laststatus=2
 set confirm
 set visualbell
 set mouse=a
-set number
+set number relativenumber
 
 set shiftwidth=2
 set softtabstop=2
