@@ -30,9 +30,11 @@ git clone https://github.com/kien/rainbow_parentheses.vim.git
 git clone https://github.com/scrooloose/syntastic.git
 git clone https://github.com/nathanaelkane/vim-indent-guides.git
 git clone https://github.com/plasticboy/vim-markdown.git
-git clone https://github.com/ervandew/supertab.git
+# git clone https://github.com/ervandew/supertab.git ## obselete due to YouCompleteMe
 git clone https://github.com/tpope/vim-endwise.git
 git clone https://github.com/powerline/powerline.git
+
+git clone https://github.com/junegunn/goyo.vim.git
 
 ##python plugins
 git clone https://github.com/nvie/vim-flake8.git
@@ -40,3 +42,29 @@ git clone https://github.com/nvie/vim-flake8.git
 # colour schemes
 git clone https://github.com/jnurmine/Zenburn.git
 git clone git://github.com/altercation/vim-colors-solarized.git
+
+
+# YouCompleteMe Setup
+git clone https://github.com/Valloric/YouCompleteMe.git
+cd YouCompleteMe
+git submodule update --init --recursive
+
+# check python installed
+echo Checking Python is installed...
+if command -v python &>/dev/null; then
+    echo Woo! Python IS installed!! 
+else
+    echo Python is not installed but required for YouCompleteMe
+    exit 1;
+fi
+
+# check cmake installed
+echo Checking if cmake is installed...
+if command -v cmake &>/dev/null; then
+    echo Woo! cmake IS installed!! 
+else
+    echo Cmake is not installed but required for YouCompleteMe
+    exit 1;
+fi
+
+./install.py
