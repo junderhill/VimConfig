@@ -4,6 +4,13 @@ set nocompatible
 filetype indent plugin on 
 syntax on
 
+if has('gui_running')
+  set background=dark
+  colorscheme solarized
+else
+  colorscheme zenburn
+endif
+
 set hidden
 set autoindent
 set ruler
@@ -19,6 +26,8 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 set spelllang=en_gb
+
+set encoding=utf-8
 
 au VimEnter * RainbowParenthesesToggleAll
 
@@ -39,3 +48,17 @@ endif
 
 "Map jk in insert mode to <esc>
 inoremap jk <ESC> 
+
+"Python formattiing
+autocmd BufNewFile,BufRead *.py
+    \ set tabstop=4 |
+    \ set softtabstop=4 |
+    \ set shiftwidth=4 |
+    \ set textwidth=79 |
+    \ set expandtab |
+    \ set autoindent |
+    \ set fileformat=unix
+
+highlight BadWhitespace ctermfg=16 ctermbg=253 guifg=#000000 guibg=#F8F8F0
+
+au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/

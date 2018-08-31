@@ -32,3 +32,11 @@ git clone https://github.com/nathanaelkane/vim-indent-guides.git
 git clone https://github.com/plasticboy/vim-markdown.git
 git clone https://github.com/ervandew/supertab.git
 git clone https://github.com/tpope/vim-endwise.git
+git clone https://github.com/powerline/powerline.git
+
+##python plugins
+git clone https://github.com/nvie/vim-flake8.git
+
+# colour schemes
+git clone https://github.com/jnurmine/Zenburn.git
+git clone git://github.com/altercation/vim-colors-solarized.git
