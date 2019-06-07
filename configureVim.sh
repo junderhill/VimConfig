@@ -35,6 +35,7 @@ git clone https://github.com/tpope/vim-endwise.git
 git clone https://github.com/powerline/powerline.git
 
 git clone https://github.com/junegunn/goyo.vim.git
+git clone https://github.com/junegunn/limelight.vim.git
 
 ##python plugins
 git clone https://github.com/nvie/vim-flake8.git

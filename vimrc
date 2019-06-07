@@ -51,14 +51,49 @@ inoremap jk <ESC>
 
 "Python formattiing
 autocmd BufNewFile,BufRead *.py
-    \ set tabstop=4 |
-    \ set softtabstop=4 |
-    \ set shiftwidth=4 |
-    \ set textwidth=79 |
-    \ set expandtab |
-    \ set autoindent |
-    \ set fileformat=unix
+      \ set tabstop=4 |
+      \ set softtabstop=4 |
+      \ set shiftwidth=4 |
+      \ set textwidth=79 |
+      \ set expandtab |
+      \ set autoindent |
+      \ set fileformat=unix
 
 highlight BadWhitespace ctermfg=16 ctermbg=253 guifg=#000000 guibg=#F8F8F0
 
 au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+
+function! s:goyo_enter()
+  set spell
+  set noshowmode
+  set noshowcmd
+  Limelight
+  set t_Co=256
+  let g:solarized_termcolors=256
+  set background=dark
+  colorscheme zenburn
+  if exists('$TMUX')
+    silent !tmux set status off
+  endif
+endfunction
+
+function! s:goyo_leave()
+  set nospell
+  set showmode
+  set showcmd
+  Limelight!
+  set t_Co=256
+  if !has('gui_running')
+    set background=dark
+    colorscheme zenburn
+  elseif has('gui_running')
+    let g:solarized_termcolors=256
+    set background=dark
+    colorscheme solarized
+  elseif exists('$TMUX')
+    silent !tmux set status on
+  endif
+endfunction
+
+autocmd! User GoyoEnter nested call <SID>goyo_enter()
+autocmd! User GoyoLeave nested call <SID>goyo_leave()
