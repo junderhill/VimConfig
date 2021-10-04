@@ -34,3 +34,4 @@ git clone https://github.com/w0rp/ale.git
 
 git clone https://github.com/OmniSharp/omnisharp-vim.git 
 git clone https://github.com/nickspoons/vim-sharpenup.git
+git clone git@github.com:prabirshrestha/asyncomplete.vim.git

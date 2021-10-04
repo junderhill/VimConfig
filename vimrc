@@ -4,12 +4,12 @@ set nocompatible
 filetype indent plugin on 
 syntax enable
 
-if has('gui_running')
-  set background=dark
-  colorscheme solarized
-else
-  colorscheme zenburn
-endif
+" if has('gui_running')
+"   set background=dark
+"   colorscheme solarized
+" else
+"   colorscheme zenburn
+" endif
 
 set hidden
 set autoindent
@@ -68,4 +68,6 @@ let g:ale_linters = {
 
 let g:OmniSharp_selector_ui = 'ctrlp'  " Use ctrlp.vim
 
-
+inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <cr>    pumvisible() ? asyncomplete#close_popup() : "\<cr>"
