@@ -2,7 +2,7 @@ execute pathogen#infect()
 set nocompatible
 
 filetype indent plugin on 
-syntax on
+syntax enable
 
 if has('gui_running')
   set background=dark
@@ -60,4 +60,12 @@ autocmd BufNewFile,BufRead *.py
 highlight BadWhitespace ctermfg=16 ctermbg=253 guifg=#000000 guibg=#F8F8F0
 
 au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+
+
+let g:ale_linters = {
+\ 'cs': ['OmniSharp']
+\}
+
+let g:OmniSharp_selector_ui = 'ctrlp'  " Use ctrlp.vim
+
 
