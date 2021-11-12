@@ -30,8 +30,12 @@ git clone https://github.com/kien/ctrlp.vim.git
 git clone https://github.com/nathanaelkane/vim-indent-guides.git
 git clone https://github.com/plasticboy/vim-markdown.git
 
+git clone https://github.com/preservim/nerdtree.git
+
+#async linting engine
 git clone https://github.com/w0rp/ale.git
 
 git clone https://github.com/OmniSharp/omnisharp-vim.git 
+#mappings and integrations for omnisharp
 git clone https://github.com/nickspoons/vim-sharpenup.git
 git clone git@github.com:prabirshrestha/asyncomplete.vim.git
