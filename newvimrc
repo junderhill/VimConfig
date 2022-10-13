@@ -490,6 +490,9 @@ let g:go_highlight_array_whitespace_error = 0
 let g:go_highlight_trailing_whitespace_error = 0
 let g:go_highlight_extra_types = 1
 
+" Remap Ctrl-x, Ctrl-o for autocompletion in go to Ctrl-b
+:inoremap <C-b> <C-x><C-o>
+
 autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4
 
 augroup completion_preview_close
